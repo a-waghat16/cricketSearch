@@ -1,0 +1,52 @@
+.card {
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.player-image {
+  height: 200px;
+  width: 350px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: teal;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.player-name {
+    text-align: center;
+}
+
+.role, .batting, .bowling {
+    display: flex;
+    align-items: center;
+}
+
+.role p, .batting p, .bowling p {
+    margin-left: 10px;
+    text-align: center
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    color: black;
+  }
+
+  .player-image {
+    width: 450px;
+    height: 350px;
+  }
+}

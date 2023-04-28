@@ -1,0 +1,80 @@
+.whole-page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.whole-page {
+  max-width: 1400px;
+}
+
+.cards-holder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.above-card-holder {
+  margin: 50px 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.above-card-holder-h3 {
+  font-size: 30px;
+  font-weight: 450;
+  letter-spacing: 1px;
+}
+
+.above-card-holder-h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.filter {
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.filter option {
+  color: teal;
+  background-color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 50px 0;
+  width: 100%
+}
+
+.pagination li {
+  margin: 0 15px;
+}
+
+.pagination li a {
+  color: #000;
+  text-decoration: none;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pagination li.active a {
+  background-color: teal;
+  color: #fff;
+  border-color: teal;
+}
+
+@media (max-width: 900px) {
+  .above-card-holder {
+    display: block;
+  }
+}

@@ -1,0 +1,53 @@
+.text-holder {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  color: teal;
+  font-size: 55px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #454545;
+  text-transform: uppercase;
+}
+
+span {
+  color: teal;
+}
+
+.hero-button {
+  padding: 15px 50px;
+  background-color: teal;
+  color: white;
+  border-radius: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-flex {
+  margin: 20px;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease 0.25s, transform 1.5s ease 0.25s;
+}
+
+h1,
+h2 {
+  opacity: 0;
+  transform: translateY(50px);
+}

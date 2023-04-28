@@ -1,0 +1,25 @@
+.player-page-search {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchbar-player-page {
+    width: 85%;
+    text-align: center;
+}
+
+.hero-section-total {
+  background-image: url("../assets/images/hero-opacity.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 4px solid teal;
+}
+
+.player-page-hero-text {
+    letter-spacing: 10px;
+    font-size: 36px;
+    font-weight: 450;
+}
+
