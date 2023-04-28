@@ -7,42 +7,35 @@ import Navbar from "../Navbar/Navbar";
 import "./Players.css";
 
 const Players = (props) => {
-  const [selectedOption, setSelectedOption] = useState("select role");
+  const [selectedRole, setSelectedRole] = useState("All");
   const [currentPage, setCurrentPage] = useState(0);
-  const [playerBase, setplayerBase] = useState(playerData.player);
-  const [displayedPlayers, setdisplayedPlayers] = useState(playerBase.slice(currentPage * 9, (currentPage + 1) * 9));
+  const [searchTerm, setsearchTerm] = useState("");
 
   const playersPerPage = 9;
-  let pageCount = Math.ceil(playerBase.length / playersPerPage);
 
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
   };
 
   const handleSelectOption = (event) => {
-    setSelectedOption(event.target.value);
+    setSelectedRole(event.target.value);
   };
 
   const handleSearch = (searchTerm) => {
-    setSelectedOption('select role');
-    setCurrentPage(0);
-    setplayerBase(playerData.player);
-    const results = playerData.player.filter((player) => player.name.includes(searchTerm));
-    console.log(`The player results for ${searchTerm} were ${results}`)
-    setdisplayedPlayers(results.slice(currentPage * playersPerPage, (currentPage + 1) * playersPerPage));
-    pageCount = Math.ceil(results.length / playersPerPage)
+    setsearchTerm(searchTerm);
   };
 
-  useEffect(() => {
-    if (selectedOption === "select role") {
-      setdisplayedPlayers(playerData.player.slice(currentPage * playersPerPage, (currentPage + 1) * playersPerPage));
-    } else {
-      const filteredPlayers = playerData.player.filter((player) => player.role === selectedOption);
-      setdisplayedPlayers(filteredPlayers.slice(currentPage * playersPerPage, (currentPage + 1) * playersPerPage));
-      pageCount = Math.ceil(filteredPlayers.length / playersPerPage);
-    }
-  }, [selectedOption,currentPage]);
+  const filteredPlayers = playerData.player.filter((player) => {
+    return (
+      selectedRole === 'All' ||
+      player.role.toLowerCase() === selectedRole.toLowerCase()
+    );
+  }).filter((player) => {
+    return player.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
+  const pageCount = Math.ceil(filteredPlayers.length / playersPerPage);
+  const displayedPlayers = filteredPlayers.slice(currentPage * playersPerPage, (currentPage + 1) * playersPerPage)
   return (
     <div>
       <div className="hero-section-total">
@@ -66,11 +59,8 @@ const Players = (props) => {
             </div>
             <div>
               <h3 className="above-card-holder-h3">Filter by role</h3>
-              <select className="filter" value={selectedOption} onChange={handleSelectOption}>
-                <option value="select role" disabled>
-                  Select Role
-                </option>
-                <option value="select role">View All</option>
+              <select className="filter" value={selectedRole} onChange={handleSelectOption}>
+                <option value="All">View All</option>
                 <option value="Batsmen">Batsmen</option>
                 <option value="Bowler">Bowler</option>
                 <option value="All-Rounder">All-rounder</option>
