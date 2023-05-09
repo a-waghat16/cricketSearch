@@ -1,0 +1,35 @@
+.video-card {
+  cursor: pointer;
+  display: inline-block;
+  width: 325px;
+}
+
+.video-card:hover {
+  transform: scale(1.1);
+}
+
+.video-thumbnail {
+  height: 300px;
+  width: 325px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 900px) {
+    .video-card {
+        width: 600px;
+        margin: 40px;
+    }
+
+    .video-thumbnail {
+        width: 600px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .video-title {
+        color: black
+    }
+}

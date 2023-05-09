@@ -1,9 +1,17 @@
 export const options = {
   method: "GET",
   headers: {
-    "content-type": "application/json",
-    "X-RapidAPI-Key": "398fb31e87msh8ee2b18b0352deep13a742jsn5b2345ed5052",
-    "X-RapidAPI-Host": "unofficial-cricbuzz.p.rapidapi.com",
+    "content-type": "application/octet-stream",
+    "X-RapidAPI-Key": "0dac6a77b1msh0518125ea20e6f7p1ec279jsn864a0843cd3a",
+    "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
+  },
+};
+
+export const youTubeOptions = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "0dac6a77b1msh0518125ea20e6f7p1ec279jsn864a0843cd3a",
+    "X-RapidAPI-Host": "youtube-search-results.p.rapidapi.com",
   },
 };
 

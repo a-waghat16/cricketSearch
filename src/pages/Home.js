@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import joeroot from "../assets/images/joe-root.png";
 import starc from "../assets/images/starc.png";
-import "./Home.css";
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState({

@@ -10,7 +10,8 @@ const PlayerCard = (props) => {
   const urlTo = `playerdetail/${props.id}`
   return (
     <Link className="card" to={urlTo}>
-      <div className="player-image" style={{backgroundImage: `url(${props.imgSrc})`}}></div>
+      <div className="player-image" style={{backgroundImage: `url(${props.imgSrc})`}} >
+      </div>
       <div className="name">
         <h3 className="player-name">{props.name}</h3>
       </div>
