@@ -33,3 +33,14 @@
         color: black
     }
 }
+
+@media (max-width: 640px) {
+  .video-card{
+    width: 350px;
+    margin: 30px 0;
+  }
+
+  .video-thumbnail {
+    width: 350px;
+  }
+}

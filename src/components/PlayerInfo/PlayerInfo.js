@@ -49,9 +49,9 @@ const PlayerInfo = () => {
         <div className="player-detail-top">
           <div className="player-detail-image">
             <Link to="/playerpage">
-              <FontAwesomeIcon icon={faRotateLeft} />
+              <FontAwesomeIcon icon={faRotateLeft} className="back"/>
             </Link>
-            <h4>Back To Players</h4>
+            <h4 className="back-text">Back To Players</h4>
             <img src={imgSrc} alt="player" />
           </div>
           <div className="personal-details">

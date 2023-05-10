@@ -78,6 +78,25 @@
 
 @media (max-width: 900px) {
   .above-card-holder {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .above-card-holder-h3 {
+    font-size: 20px;
+  }
+
+  .above-card-holder-h4 {
+    font-size: 16px;
+  }
+
+  .pagination li {
+    margin: 0 5px;
+  }
+
+  .pagination li a {
+    padding: 10px;
   }
 }

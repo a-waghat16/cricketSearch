@@ -51,3 +51,22 @@ h2 {
   opacity: 0;
   transform: translateY(50px);
 }
+
+@media (max-width: 450px) {
+  .hero-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+}

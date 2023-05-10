@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { playerData } from "../../utils/playerData";
 import PlayerCard from "../PlayerCard/PlayerCard";
@@ -25,17 +25,16 @@ const Players = (props) => {
     setsearchTerm(searchTerm);
   };
 
-  const filteredPlayers = playerData.player.filter((player) => {
-    return (
-      selectedRole === 'All' ||
-      player.role.toLowerCase() === selectedRole.toLowerCase()
-    );
-  }).filter((player) => {
-    return player.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
+  const filteredPlayers = playerData.player
+    .filter((player) => {
+      return selectedRole === "All" || player.role.toLowerCase() === selectedRole.toLowerCase();
+    })
+    .filter((player) => {
+      return player.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 
   const pageCount = Math.ceil(filteredPlayers.length / playersPerPage);
-  const displayedPlayers = filteredPlayers.slice(currentPage * playersPerPage, (currentPage + 1) * playersPerPage)
+  const displayedPlayers = filteredPlayers.slice(currentPage * playersPerPage, (currentPage + 1) * playersPerPage);
   return (
     <div>
       <div className="hero-section-total">
@@ -80,6 +79,8 @@ const Players = (props) => {
                 imgSrc={`http://i.cricketcb.com/stats/img/faceImages/${player.id}.jpg`}
               />
             ))}
+          </div>
+          <div className='paginate-div'>
             <ReactPaginate
               previousLabel="previous"
               nextLabel="next"
